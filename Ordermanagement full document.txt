@@ -1,0 +1,390 @@
+Hi i have attached one script file which i have created tables and store procedures please check once.
+Coming to the web application i have created webapi Rest full services Please find the Controllers folder "order controller" in that form i have created [Http post] services done functionality like add,update,delete and login based 
+display data.
+I have used nuget like QRCoder and instead of Barcode i have used Qrcode
+and genrated qr codes are in (~/ordermanagement/uploaddocuments/qrcodes) folder please find the folder.
+And below  i have Placed "Postman output"
+Please check once.
+
+--------------
+
+For add order (Here i have used ","(comma) separation for multiple products,quantity,status and more please find the body)
+
+http://localhost:51775//api/Order/Ordertransaction
+
+{
+"sno":"",
+"Order_ID":"",
+"ProductID":"101,102", 
+"ProductName":"Chair,table", 
+"Quantity":"1,2", 
+"OrderStatus":"Placed,Placed", 
+"CustomerId":"1001", 
+"CustomerName":"Mark",
+"ShippingAddress":"CRediff", 
+"Mobile":"9685152151", 
+"Condition":"AddOrders" 
+}
+
+output:
+
+{
+    "Status_cd": "1",
+    "ds": {
+        "Table": [
+            {
+                "Result": "True",
+                "Sno": 1,
+                "Order_ID": 76844127,
+                "ProductID": 101,
+                "ProductName": "Chair",
+                "Quantity": 1,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "~/UploadDocuments/Qrcodes/10-12-2020_2_32__Q446874.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T19:20:20.687"
+		"Height": "4.6",
+                "Weight": "6kg",
+                "Image": "imageurl"
+            },
+            {
+                "Result": "True",
+                "Sno": 2,
+                "Order_ID": 76844127,
+                "ProductID": 102,
+                "ProductName": "table",
+                "Quantity": 2,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "~/UploadDocuments/Qrcodes/10-12-2020_2_32__Q446874.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T19:20:20.687"
+		"Height": "5.6",
+                "Weight": "8kg",
+                "Image": "imageurl"
+            }
+        ]
+    },
+    "ErrorMsg": null
+}
+-----------
+For update (Here based on productid and orderid i have updated only orderstatus if we want can mdify by adding params in sp.)
+
+http://localhost:51775//api/Order/Ordertransaction
+
+{
+"sno":"",
+"Order_ID":"76844127",
+"ProductID":"101", 
+"ProductName":"", 
+"Quantity":"", 
+"OrderStatus":"Dispatched", 
+"CustomerId":"", 
+"CustomerName":"",
+"ShippingAddress":"", 
+"Mobile":"", 
+"Condition":"UpdateOrders" 
+}
+
+
+{
+    "Status_cd": "1",
+    "ds": {
+        "Table": [
+            {
+                "Result": "True",
+                "Sno": 1,
+                "Order_ID": 76844127,
+                "ProductID": 101,
+                "ProductName": "Chair",
+                "Quantity": 1,
+                "OrderStatus": "Dispatched",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "~/UploadDocuments/Qrcodes/10-12-2020_2_32__Q446874.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T19:20:20.687"
+		"Height": "4.6",
+                "Weight": "6kg",
+                "Image": "imageurl"
+            }
+        ]
+    },
+    "ErrorMsg": null
+}
+----------------------------
+Delete order
+(Here am deleting order based on order and product id by perticular.)
+
+http://localhost:51775//api/Order/Ordertransaction
+
+{
+"sno":"",
+"Order_ID":"76844127",
+"ProductID":"101", 
+"ProductName":"", 
+"Quantity":"", 
+"OrderStatus":"", 
+"CustomerId":"", 
+"CustomerName":"",
+"ShippingAddress":"", 
+"Mobile":"", 
+"Condition":"DeleteOrders" 
+}
+
+output:
+{
+    "Status_cd": "1",
+    "ds": {
+        "Table": [
+            {
+                "Result": "True",
+                "Outputmsg": "Order Deleted sucessfully"
+            }
+        ]
+    },
+    "ErrorMsg": null
+}
+-------------
+
+UserManagement 
+------------------
+When user login (Here based customer login am showing his perticular data)
+
+http://localhost:51775//api/Order/Usermanagement
+
+
+{
+"Loginid":"1001",
+"Password":"123456",
+"usertype":"User"
+}
+
+output:
+
+{
+    "Status_cd": "1",
+    "ds": {
+        "Table": [
+            {
+                "Result": "True",
+                "Sno": 1,
+                "Order_ID": 48432831,
+                "ProductID": 101,
+                "ProductName": "Chair",
+                "Quantity": 1,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "https://api.oclinico.com/oclinicoapi/UploadDocuments/Qrcodes/10-12-2020_2_21__Q780224.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T20:50:59.667",
+                "Height": "4.6",
+                "Weight": "6kg",
+                "Image": "imageurl"
+            },
+            {
+                "Result": "True",
+                "Sno": 3,
+                "Order_ID": 31245741,
+                "ProductID": 101,
+                "ProductName": "Chair",
+                "Quantity": 1,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "~/UploadDocuments/Qrcodes/10-12-2020_2_32__Q446874.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T21:00:15.977",
+                "Height": "4.6",
+                "Weight": "6kg",
+                "Image": "imageurl"
+            },
+            {
+                "Result": "True",
+                "Sno": 2,
+                "Order_ID": 48432831,
+                "ProductID": 102,
+                "ProductName": "table",
+                "Quantity": 2,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "https://api.oclinico.com/oclinicoapi/UploadDocuments/Qrcodes/10-12-2020_2_21__Q780224.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T20:50:59.667",
+                "Height": "5.6",
+                "Weight": "8kg",
+                "Image": "imageurl"
+            },
+            {
+                "Result": "True",
+                "Sno": 4,
+                "Order_ID": 31245741,
+                "ProductID": 102,
+                "ProductName": "table",
+                "Quantity": 2,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "~/UploadDocuments/Qrcodes/10-12-2020_2_32__Q446874.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T21:00:15.977",
+                "Height": "5.6",
+                "Weight": "8kg",
+                "Image": "imageurl"
+            }
+        ]
+    },
+    "ErrorMsg": null
+}
+--------------------------
+Admin login (Here am showing all order details)
+
+http://localhost:51775//api/Order/Usermanagement
+
+{
+"Loginid":"Admin",
+"Password":"Admin123",
+"usertype":"Admin"
+}
+
+{
+    "Status_cd": "1",
+    "ds": {
+        "Table": [
+            {
+                "Result": "True",
+                "Sno": 1,
+                "Order_ID": 48432831,
+                "ProductID": 101,
+                "ProductName": "Chair",
+                "Quantity": 1,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "https://api.oclinico.com/oclinicoapi/UploadDocuments/Qrcodes/10-12-2020_2_21__Q780224.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T20:50:59.667",
+                "Height": "4.6",
+                "Weight": "6kg",
+                "Image": "imageurl"
+            },
+            {
+                "Result": "True",
+                "Sno": 2,
+                "Order_ID": 48432831,
+                "ProductID": 102,
+                "ProductName": "table",
+                "Quantity": 2,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "https://api.oclinico.com/oclinicoapi/UploadDocuments/Qrcodes/10-12-2020_2_21__Q780224.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T20:50:59.667",
+                "Height": "5.6",
+                "Weight": "8kg",
+                "Image": "imageurl"
+            },
+            {
+                "Result": "True",
+                "Sno": 3,
+                "Order_ID": 31245741,
+                "ProductID": 101,
+                "ProductName": "Chair",
+                "Quantity": 1,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "~/UploadDocuments/Qrcodes/10-12-2020_2_32__Q446874.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T21:00:15.977",
+                "Height": "4.6",
+                "Weight": "6kg",
+                "Image": "imageurl"
+            },
+            {
+                "Result": "True",
+                "Sno": 4,
+                "Order_ID": 31245741,
+                "ProductID": 102,
+                "ProductName": "table",
+                "Quantity": 2,
+                "OrderStatus": "Placed",
+                "CustomerId": "1001",
+                "CustomerName": "Mark",
+                "ShippingAddress": "CRediff",
+                "Mobile": 9685152151,
+                "Barcode": "~/UploadDocuments/Qrcodes/10-12-2020_2_32__Q446874.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T21:00:15.977",
+                "Height": "5.6",
+                "Weight": "8kg",
+                "Image": "imageurl"
+            },
+            {
+                "Result": "True",
+                "Sno": 5,
+                "Order_ID": 43382374,
+                "ProductID": 101,
+                "ProductName": "Chair",
+                "Quantity": 1,
+                "OrderStatus": "Placed",
+                "CustomerId": "1002",
+                "CustomerName": "William",
+                "ShippingAddress": "sydney",
+                "Mobile": 9685256980,
+                "Barcode": "~/UploadDocuments/Qrcodes/10-12-2020_3_0__Q078228.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T21:30:47.747",
+                "Height": "4.6",
+                "Weight": "6kg",
+                "Image": "imageurl"
+            },
+            {
+                "Result": "True",
+                "Sno": 6,
+                "Order_ID": 43382374,
+                "ProductID": 102,
+                "ProductName": "table",
+                "Quantity": 2,
+                "OrderStatus": "Placed",
+                "CustomerId": "1002",
+                "CustomerName": "William",
+                "ShippingAddress": "sydney",
+                "Mobile": 9685256980,
+                "Barcode": "~/UploadDocuments/Qrcodes/10-12-2020_3_0__Q078228.Jpeg",
+                "Status": "Active",
+                "Created_date": "2020-12-10T21:30:47.747",
+                "Height": "5.6",
+                "Weight": "8kg",
+                "Image": "imageurl"
+            }
+        ]
+    },
+    "ErrorMsg": null
+}
