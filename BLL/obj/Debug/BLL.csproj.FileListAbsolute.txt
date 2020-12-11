@@ -1,0 +1,6 @@
+C:\Users\JAY\source\repos\Ordermanagement\BLL\bin\Debug\BLL.dll
+C:\Users\JAY\source\repos\Ordermanagement\BLL\bin\Debug\BLL.pdb
+C:\Users\JAY\source\repos\Ordermanagement\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\JAY\source\repos\Ordermanagement\BLL\obj\Debug\BLL.dll
+C:\Users\JAY\source\repos\Ordermanagement\BLL\obj\Debug\BLL.pdb
+C:\Users\JAY\source\repos\Ordermanagement\BLL\obj\Debug\BLL.csprojAssemblyReference.cache

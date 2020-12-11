@@ -1,0 +1,15 @@
+D:\Office\Urbankisaan\UrbanKisaan\DAL\bin\Debug\DAL.dll
+D:\Office\Urbankisaan\UrbanKisaan\DAL\bin\Debug\DAL.pdb
+D:\Office\Urbankisaan\UrbanKisaan\DAL\obj\Debug\DAL.dll
+D:\Office\Urbankisaan\UrbanKisaan\DAL\obj\Debug\DAL.pdb
+E:\UrbanKisaan\DAL\bin\Debug\DAL.dll
+E:\UrbanKisaan\DAL\bin\Debug\DAL.pdb
+E:\UrbanKisaan\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\UrbanKisaan\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\UrbanKisaan\DAL\obj\Debug\DAL.dll
+E:\UrbanKisaan\DAL\obj\Debug\DAL.pdb
+C:\Users\JAY\source\repos\Ordermanagement\DAL\bin\Debug\DAL.dll
+C:\Users\JAY\source\repos\Ordermanagement\DAL\bin\Debug\DAL.pdb
+C:\Users\JAY\source\repos\Ordermanagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\JAY\source\repos\Ordermanagement\DAL\obj\Debug\DAL.dll
+C:\Users\JAY\source\repos\Ordermanagement\DAL\obj\Debug\DAL.pdb
